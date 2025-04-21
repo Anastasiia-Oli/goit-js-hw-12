@@ -83,16 +83,6 @@ const submit = form.addEventListener('submit', async event => {
   }
 });
 
-//   if (totalPages === page || total <= 15) {
-
-//     hideLoadMoreButton();
-//     return;
-//   }
-
-// .finally(() => {
-
-// });
-
 const loadBtn = loadMore.addEventListener('click', async () => {
   if (page >= totalPages) {
     iziToast.info({
@@ -108,7 +98,7 @@ const loadBtn = loadMore.addEventListener('click', async () => {
   showLoader();
 
   try {
-    const { pictures } = await getImagesByQuery();
+    const { pictures } = await getImagesByQuery(queryVal, page);
     createGallery(pictures);
 
     // ----------- scroll

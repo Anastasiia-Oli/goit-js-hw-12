@@ -54,10 +54,6 @@ export function createGallery(images) {
 
   gallery.insertAdjacentHTML('beforeend', markup);
 
-  //   const link = document
-  //     .querySelector('.gallery-link')
-  //     .addEventListener('click', event => event.preventDefault());
-
   lightbox.refresh();
 }
 
@@ -80,18 +76,3 @@ export function showLoadMoreButton() {
 export function hideLoadMoreButton() {
   loadMore.classList.remove('btn-visible');
 }
-
-//     ----------------------  lightbox
-
-// let lightbox = null;
-
-// export function initLightbox() {
-//   lightbox = new SimpleLightbox('.gallery a', {
-//     captionsData: 'alt',
-//     captionDelay: 250,
-//   });
-// }
-
-// export function refreshLightbox() {
-//   if (lightbox) lightbox.refresh();
-// }
